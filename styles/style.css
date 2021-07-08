@@ -1,0 +1,91 @@
+#calculator{
+    border: solid black 5px;
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#display{
+    border: solid green 5px;
+    width: auto;
+    height: auto;
+}
+
+#btn_pad{
+    border: solid red 5px;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-areas:
+        "g h i j k"
+        "d e f l m"
+        "a b c n o"
+        "p q r s s";
+}
+
+#one{
+    grid-area: a;
+}
+
+#two{
+    grid-area: b;
+}
+
+#three{
+    grid-area: c;
+}
+
+#four{
+    grid-area: d;
+}
+
+#five{
+    grid-area: e;
+}
+
+#six{
+    grid-area: f;
+}
+
+#seven{
+    grid-area: g;
+}
+
+#eight{
+    grid-area: h;
+}
+
+#nine{
+    grid-area: i;
+}
+
+#zero{
+    grid-area: q;
+}
+
+#clear_btn{
+    grid-area: j;
+}
+
+#add_btn{
+    grid-area: l;
+}
+
+#sub_btn{
+    grid-area: m;
+}
+
+#mult_btn{
+    grid-area: n;
+}
+
+#divi_btn{
+    grid-area: o;
+}
+
+#equal_btn{
+    grid-area: s;
+}
