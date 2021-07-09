@@ -1,5 +1,6 @@
 #calculator{
     border: solid black 5px;
+    margin: 100px;
     width: 600px;
     height: 600px;
     display: flex;
@@ -12,18 +13,25 @@
     border: solid green 5px;
     width: auto;
     height: auto;
+    padding: 10px 40px;
+    font-size: 48pt;
+    
 }
 
 #btn_pad{
     border: solid red 5px;
-    width: auto;
-    height: auto;
+    width: 450px;
+    height: 450px;
     display: grid;
     grid-template-areas:
         "g h i j k"
         "d e f l m"
         "a b c n o"
         "p q r s s";
+}
+
+button{
+    font-size: 42pt;
 }
 
 #one{
