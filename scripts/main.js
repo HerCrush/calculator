@@ -18,16 +18,41 @@ function operate(op,a,b) {
     a = + a;
     b = + b;
     switch(op) {
-        case '+': return add(a,b);
+        case '+': return limitDigits(add(a,b));
             break;
-        case '-': return subtract(a,b);
+        case '-': return limitDigits(subtract(a,b));
             break;
-        case '*': return multiply(a,b);
+        case '*': return limitDigits(multiply(a,b));
             break;
-        case '/': return divide(a,b);
+        case '/': return limitDigits(divide(a,b));
             break;
         default: return 'Syntax error!';
     }
+}
+
+function limitDigits(num) {
+    if(num>=100000000000){
+        let e = 0;
+        while(num>=10){
+            num = num/10;
+            e++;
+        }
+        num = Math.round(num*1000)/1000;
+        return `${num}e${e}`;
+    }
+    if(num<0.000000001){
+        let e = 0;
+        while(num<1){
+            num = num*10;
+            e--;
+        }
+        num = Math.round(num*1000)/1000;
+        return `${num}e${e}`;
+    }
+    if(String(num).length>11){
+        return num.toPrecision(10);   //no messirve, hacer de otra forma
+    }
+    return num;
 }
 
 
@@ -49,6 +74,9 @@ digBtns.forEach( btn => btn.addEventListener( 'click' , e => {
         displayScreen.textContent = '';
         displayValue = '';
         nextTimeClean = false;
+    }
+    if(displayValue.length>10){
+        return;
     }
     displayValue+=e.target.innerText;
     displayScreen.textContent = displayValue;
