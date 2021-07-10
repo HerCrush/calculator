@@ -1,8 +1,14 @@
+@font-face {
+    font-family: "Open24";
+    src: url("file:///home/nacho/the-odin-project/calculator/fonts/open_24_display_st/Open\ 24\ Display\ St.ttf");
+}
+
 #calculator{
-    border: solid black 5px;
-    margin: 100px;
-    width: 600px;
-    height: 600px;
+    border: solid black;
+    background-color: rgb(78,75,75);
+    margin: 10px auto;
+    width: 800px;
+    height: 900px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,29 +16,57 @@
 }
 
 #display{
-    border: solid green 5px;
-    width: 450px;
+    background-color: rgb(212,226,226);
+    border: inset rgb(91, 87, 87);
+    border-width: 10px 15px 20px 15px;
+    font-family: "Open24";
+    width: 650px;
     height: 1em;
-    padding: 10px 40px;
+    padding: 0px 30px 20px 30px;
     text-align: right;
-    font-size: 48pt;
-    
+    font-size: 86pt;
+    letter-spacing: 5px;
 }
 
 #btn_pad{
-    border: solid red 5px;
-    width: 450px;
-    height: 450px;
+    width: 750px;
+    height: 600px;
     display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4,1fr);
     grid-template-areas:
-        "g h i j k"
+        "g h i j j"
         "d e f l m"
         "a b c n o"
-        "p q r s s";
+        "p q q s s";
 }
 
 button{
+    color: white;
+    border: outset;
     font-size: 42pt;
+    border-radius: 15px;
+    margin: 20px 15px;
+}
+
+button:active{
+    border-style: inset;
+    color: hsl(0, 0%, 93%);
+}
+
+.digit{
+    background-color: hsl(0, 0%, 57%);
+    border-color: hsl(0, 0%, 62%);
+}
+
+.digit:active{
+    background-color: hsl(0, 0%, 50%);
+    border-color: hsl(0, 0%, 57%);
+}
+
+.operator{
+    background-color: hsl(0, 1%, 29%);
+    border-color: hsl(0, 1%, 29%);
 }
 
 #one{
@@ -76,10 +110,14 @@ button{
 }
 
 #dot{
+    background-color: hsl(0, 0%, 57%);
+    border-color: hsl(0, 0%, 57%);
     grid-area: p;
 }
 
 #clear_btn{
+    background-color: hsl(0, 26%, 54%);
+    border-color: hsl(0, 26%, 54%);
     grid-area: j;
 }
 
@@ -100,5 +138,7 @@ button{
 }
 
 #equal_btn{
+    background-color: hsl(0, 0%, 57%);
+    border-color: hsl(0, 0%, 57%);
     grid-area: s;
 }
