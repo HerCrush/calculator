@@ -75,6 +75,10 @@ button{
     grid-area: q;
 }
 
+#dot{
+    grid-area: p;
+}
+
 #clear_btn{
     grid-area: j;
 }
