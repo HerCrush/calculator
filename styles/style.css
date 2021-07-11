@@ -4,8 +4,8 @@
 }
 
 #calculator{
-    border: solid black;
-    background-color: rgb(78,75,75);
+    border: outset 8px hsl(0, 2%, 40%);
+    background-color: hsl(0, 2%, 35%);
     margin: 10px auto;
     width: 800px;
     height: 900px;
@@ -16,9 +16,9 @@
 }
 
 #display{
-    background-color: rgb(212,226,226);
-    border: inset rgb(91, 87, 87);
-    border-width: 10px 15px 20px 15px;
+    background-color: hsl(180, 19%, 86%);
+    border: inset hsl(0, 2%, 40%);
+    border-width: 15px 18px 40px 18px;
     font-family: "Open24";
     width: 650px;
     height: 1em;
@@ -43,7 +43,7 @@
 
 button{
     color: white;
-    border: outset;
+    border: outset 5px;
     font-size: 42pt;
     border-radius: 15px;
     margin: 20px 15px;
@@ -52,6 +52,7 @@ button{
 button:active{
     border-style: inset;
     color: hsl(0, 0%, 93%);
+    padding: 5px 0px 0px 5px;
 }
 
 .digit{
@@ -61,12 +62,17 @@ button:active{
 
 .digit:active{
     background-color: hsl(0, 0%, 50%);
-    border-color: hsl(0, 0%, 57%);
+    border-color: hsl(0, 0%, 55%);
 }
 
 .operator{
-    background-color: hsl(0, 1%, 29%);
-    border-color: hsl(0, 1%, 29%);
+    background-color: hsl(0, 1%, 25%);
+    border-color: hsl(0, 1%, 30%);
+}
+
+.operator:active{
+    background-color: hsl(0, 1%, 20%);
+    border-color: hsl(0, 1%, 25%);
 }
 
 #one{
@@ -111,14 +117,24 @@ button:active{
 
 #dot{
     background-color: hsl(0, 0%, 57%);
-    border-color: hsl(0, 0%, 57%);
+    border-color: hsl(0, 0%, 62%);
     grid-area: p;
+}
+
+#dot:active{
+    background-color: hsl(0, 0%, 50%);
+    border-color: hsl(0, 0%, 55%);
 }
 
 #clear_btn{
     background-color: hsl(0, 26%, 54%);
-    border-color: hsl(0, 26%, 54%);
+    border-color: hsl(0, 26%, 59%);
     grid-area: j;
+}
+
+#clear_btn:active{
+    background-color: hsl(0, 26%, 47%);
+    border-color: hsl(0, 26%, 52%);
 }
 
 #add_btn{
@@ -139,6 +155,11 @@ button:active{
 
 #equal_btn{
     background-color: hsl(0, 0%, 57%);
-    border-color: hsl(0, 0%, 57%);
+    border-color: hsl(0, 0%, 62%);
     grid-area: s;
+}
+
+#equal_btn:active{
+    background-color: hsl(0, 0%, 50%);
+    border-color: hsl(0, 0%, 55%);
 }
