@@ -200,6 +200,7 @@ dotBtn.addEventListener( 'click' , () => {
     }
 } );
 
+//KEYBOARD
 window.addEventListener( 'keydown' , e => {
     const key = document.querySelector(`button[data-key="${e.keyCode}"]`);
     if(!key) return;
