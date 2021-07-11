@@ -142,6 +142,23 @@ opBtns.forEach( btn => btn.addEventListener( 'click' , e => {
     dotDisabled = false;
 } ) );
 
+//DELETE BUTTON
+const delBtn = document.querySelector("#del_btn");
+delBtn.addEventListener( 'click' , () => {
+    if(nextTimeClean) {
+        displayScreen.textContent = '';
+        displayValue = '';
+        nextTimeClean = false;
+        dotDisabled = false;
+        storedOperator = '';
+    }
+    if(displayValue.slice(-1)==='.') {
+        dotDisabled = false;
+    }
+    displayValue = displayValue.slice(0,-1);
+    displayScreen.textContent = displayScreen.textContent.slice(0,-1);
+} )
+
 //CLEAR BUTTON
 const clrBtn = document.querySelector('#clear_btn');
 clrBtn.addEventListener( 'click' , () => {
@@ -181,6 +198,12 @@ dotBtn.addEventListener( 'click' , () => {
         displayScreen.textContent = displayValue;
         dotDisabled = true;
     }
+} );
+
+window.addEventListener( 'keydown' , e => {
+    const key = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    if(!key) return;
+    key.click();
 } );
 
 

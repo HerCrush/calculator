@@ -3,8 +3,14 @@
     src: url("file:///home/nacho/the-odin-project/calculator/fonts/open_24_display_st/Open\ 24\ Display\ St.ttf");
 }
 
+@font-face {
+    font-family: "Roboto Regular";
+    src: url("file:///home/nacho/the-odin-project/calculator/fonts/Roboto/Roboto-Regular.ttf");
+}
+
 #calculator{
     border: outset 8px hsl(0, 2%, 40%);
+    border-radius: 15px;
     background-color: hsl(0, 2%, 35%);
     margin: 10px auto;
     width: 800px;
@@ -18,6 +24,7 @@
 #display{
     background-color: hsl(180, 19%, 86%);
     border: inset hsl(0, 2%, 40%);
+    border-radius: 5px;
     border-width: 15px 18px 40px 18px;
     font-family: "Open24";
     width: 650px;
@@ -35,7 +42,7 @@
     grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(4,1fr);
     grid-template-areas:
-        "g h i j j"
+        "g h i j k"
         "d e f l m"
         "a b c n o"
         "p q q s s";
@@ -44,6 +51,7 @@
 button{
     color: white;
     border: outset 5px;
+    font-family: "Roboto Regular";
     font-size: 42pt;
     border-radius: 15px;
     margin: 20px 15px;
@@ -126,13 +134,20 @@ button:active{
     border-color: hsl(0, 0%, 55%);
 }
 
-#clear_btn{
+#del_btn{
     background-color: hsl(0, 26%, 54%);
     border-color: hsl(0, 26%, 59%);
+    font-size: 32pt;
     grid-area: j;
 }
 
-#clear_btn:active{
+#clear_btn{
+    background-color: hsl(0, 26%, 54%);
+    border-color: hsl(0, 26%, 59%);
+    grid-area: k;
+}
+
+#clear_btn:active, #del_btn:active{
     background-color: hsl(0, 26%, 47%);
     border-color: hsl(0, 26%, 52%);
 }
