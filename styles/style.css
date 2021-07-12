@@ -8,10 +8,14 @@
     src: url("file:///home/nacho/the-odin-project/calculator/fonts/Roboto/Roboto-Regular.ttf");
 }
 
+body{
+    background: hsl(180, 100%, 23%) url("https://lh3.googleusercontent.com/proxy/GBLABRTn1bMLUiT4Dv7xXSXiECIqumuZHqZLjGvxpP-cMXqewjPXfdzX4-S3my_gGVNeDTSqFByS58NPsmEpv3ykA7x29No2gCOLBgBWP2tN6b7GO1W5UZDFOANzZh0UPv_J5A8DVw0FZPCpYB2VbzQsJnRfZfWPTg");
+}
+
 #calculator{
     border: outset 8px hsl(0, 2%, 40%);
     border-radius: 15px;
-    background-color: hsl(0, 2%, 35%);
+    background: linear-gradient(-45deg,hsl(0, 2%, 28%),hsl(0, 2%, 35%) 50%);
     margin: 10px auto;
     width: 800px;
     height: 900px;
@@ -22,7 +26,7 @@
 }
 
 #display{
-    background-color: hsl(180, 19%, 86%);
+    background: linear-gradient(-45deg,hsl(180, 19%, 86%) 20%,hsl(180, 19%, 95%)40%,hsl(180, 19%, 86%));
     border: inset hsl(0, 2%, 40%);
     border-radius: 5px;
     border-width: 15px 18px 40px 18px;
