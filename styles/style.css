@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Open24";
-    src: url("file:///home/nacho/the-odin-project/calculator/fonts/open_24_display_st/Open\ 24\ Display\ St.ttf");
+    src: url("../fonts/open_24_display_st/Open\ 24\ Display\ St.ttf");
 }
 
 @font-face {
     font-family: "Roboto Regular";
-    src: url("file:///home/nacho/the-odin-project/calculator/fonts/Roboto/Roboto-Regular.ttf");
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
 body{
